@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Course Enrollment System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2457a6;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        fieldset {
+            border: 1px solid #ccd5df;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2457a6;
+            padding: 0 10px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b9c4d0;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2457a6;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .options label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .options input {
+            width: auto;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #2457a6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #183f7a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Online Course Enrollment System</h1>
+
+        <p class="description">
+            Register for a technology course by completing the form below.
+        </p>
+
+
+        <form action="#" method="post">
+
+            <!-- STUDENT INFORMATION -->
+            <fieldset>
+
+                <legend>Student Information</legend>
+
+                <div class="form-group">
+                    <label for="fullName">
+                        Full Name <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email Address <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        Phone Number <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="country">
+                        Country <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="country"
+                        name="country"
+                        required
+                    >
+                        <option value="">-- Select Country --</option>
+                        <option value="nigeria">Nigeria</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="south-africa">South Africa</option>
+                        <option value="united-kingdom">United Kingdom</option>
+                        <option value="united-states">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+
+            <!-- COURSE SELECTION -->
+            <fieldset>
+
+                <legend>Course Selection</legend>
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Select Course <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="course"
+                        name="course"
+                        required
+                    >
+                        <option value="">-- Select a Course --</option>
+                        <option value="html-css">HTML &amp; CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="excel">Excel</option>
+                        <option value="power-bi">Power BI</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="devops">DevOps</option>
+                        <option value="data-analytics">Data Analytics</option>
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- LEARNING PREFERENCE -->
+            <fieldset>
+
+                <legend>Learning Preference</legend>
+
+                <div class="form-group">
+
+                    <label>
+                        Choose your preferred learning method
+                        <span class="required">*</span>
+                    </label>
+
+                    <div class="options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="learningPreference"
+                                value="online"
+                                required
+                            >
+                            Online
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="learningPreference"
+                                value="physical"
+                            >
+                            Physical
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="learningPreference"
+                                value="hybrid"
+                            >
+                            Hybrid
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ADDITIONAL SKILLS -->
+            <fieldset>
+
+                <legend>Additional Skills</legend>
+
+                <div class="form-group">
+
+                    <label>
+                        Select the skills you already have:
+                    </label>
+
+                    <div class="options">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="skills"
+                                value="microsoft-office"
+                            >
+                            Microsoft Office
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="skills"
+                                value="programming"
+                            >
+                            Programming
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="skills"
+                                value="data-analysis"
+                            >
+                            Data Analysis
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="skills"
+                                value="graphics-design"
+                            >
+                            Graphics Design
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="skills"
+                                value="networking"
+                            >
+                            Networking
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ADDITIONAL INFORMATION -->
+            <fieldset>
+
+                <legend>Additional Information</legend>
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Why do you want to learn this course?
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        name="reason"
+                        placeholder="Tell us why you want to learn this course..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" class="submit-btn">
+                Enroll Now
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
